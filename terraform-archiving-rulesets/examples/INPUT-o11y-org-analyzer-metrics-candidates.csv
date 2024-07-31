@@ -1,0 +1,7 @@
+﻿Metric Name,Custom MTS,Charts,Detectors
+container_cpu_utilization_aggregate,6,,
+queueSize,14,,
+ri.normalized_cost,32,,
+te.bgp.metrics.path.changes,94,,
+te.bgp.metrics.reachability,94,,
+te.bgp.metrics.updates,94,,
