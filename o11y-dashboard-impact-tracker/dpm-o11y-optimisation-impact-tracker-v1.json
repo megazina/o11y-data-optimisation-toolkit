@@ -1,0 +1,1612 @@
+{
+  "chartExports": [
+    {
+      "chart": {
+        "autoDetectRelatedDetectorIds": [],
+        "created": 0,
+        "creator": null,
+        "customProperties": {},
+        "description": "",
+        "id": "GTnQoazAsAE",
+        "lastUpdated": 0,
+        "lastUpdatedBy": null,
+        "name": "# Routing Exception rules",
+        "options": {
+          "colorBy": "Dimension",
+          "colorScale": null,
+          "colorScale2": null,
+          "maximumPrecision": null,
+          "noDataOptions": {
+            "linkText": null,
+            "linkUrl": null,
+            "noDataMessage": null
+          },
+          "programOptions": {
+            "disableSampling": false,
+            "maxDelay": 0,
+            "minimumResolution": 0,
+            "timezone": null
+          },
+          "publishLabelOptions": [
+            {
+              "displayName": "sf.org.metricruleset.numExceptionRules - Sum",
+              "label": "A",
+              "paletteIndex": null,
+              "plotType": null,
+              "valuePrefix": null,
+              "valueSuffix": null,
+              "valueUnit": null,
+              "yAxis": 0
+            }
+          ],
+          "refreshInterval": 3600000,
+          "secondaryVisualization": "None",
+          "showSparkLine": false,
+          "time": {
+            "range": 86400000,
+            "rangeEnd": 0,
+            "type": "relative"
+          },
+          "timestampHidden": false,
+          "type": "SingleValue",
+          "unitPrefix": "Metric"
+        },
+        "packageSpecifications": "",
+        "programText": "A = data('sf.org.metricruleset.numExceptionRules', filter=filter('is_internal_account', 'false') and (not filter('source_orgname', 'sfmonitoring')), rollup='latest').sum().publish(label='A')",
+        "relatedDetectorIds": [],
+        "tags": []
+      }
+    },
+    {
+      "chart": {
+        "autoDetectRelatedDetectorIds": [],
+        "created": 0,
+        "creator": null,
+        "customProperties": {},
+        "description": "",
+        "id": "GTnqU2NAoAE",
+        "lastUpdated": 0,
+        "lastUpdatedBy": null,
+        "name": ".",
+        "options": {
+          "markdown": "<table width=\"100%\" height=\"40%\" rules=\"none\">\n<tr><td valign=\"middle\" align=\"center\" bgcolor=\"#4682B4\">\n<font size=\"5\" color=\"white\">Total number of rulesets and rules created in MPM</font>\n</td></tr>\n</table>\n<p align=\"left\"><br />\nThese charts show the total number of rulesets and different types of rules created in Metrics Pipeline Management. \n</p>",
+          "type": "Text"
+        },
+        "packageSpecifications": "",
+        "programText": "",
+        "relatedDetectorIds": [],
+        "tags": []
+      }
+    },
+    {
+      "chart": {
+        "autoDetectRelatedDetectorIds": [],
+        "created": 0,
+        "creator": null,
+        "customProperties": {},
+        "description": "Datapoints received and the effective OrgLimit (may be higher than subscription limit)",
+        "id": "GTnqU2NAoAI",
+        "lastUpdated": 0,
+        "lastUpdatedBy": null,
+        "name": "DPM - Limit Utilization",
+        "options": {
+          "areaChartOptions": {
+            "showDataMarkers": false
+          },
+          "axes": [
+            {
+              "highWatermark": null,
+              "highWatermarkLabel": null,
+              "label": "",
+              "lowWatermark": null,
+              "lowWatermarkLabel": null,
+              "max": null,
+              "min": null
+            },
+            {
+              "highWatermark": null,
+              "highWatermarkLabel": null,
+              "label": "",
+              "lowWatermark": null,
+              "lowWatermarkLabel": null,
+              "max": null,
+              "min": null
+            }
+          ],
+          "axisPrecision": null,
+          "colorBy": "Dimension",
+          "defaultPlotType": "LineChart",
+          "eventPublishLabelOptions": [],
+          "histogramChartOptions": {
+            "colorThemeIndex": 16
+          },
+          "includeZero": false,
+          "legendOptions": {
+            "fields": null
+          },
+          "lineChartOptions": {
+            "showDataMarkers": false
+          },
+          "noDataOptions": {
+            "linkText": null,
+            "linkUrl": null,
+            "noDataMessage": null
+          },
+          "onChartLegendOptions": {
+            "dimensionInLegend": "sf_metric",
+            "showLegend": true
+          },
+          "programOptions": {
+            "disableSampling": false,
+            "maxDelay": 1000,
+            "minimumResolution": 1000,
+            "timezone": null
+          },
+          "publishLabelOptions": [
+            {
+              "displayName": "1-Datapoints at Ingest (before dropping)",
+              "label": "A",
+              "paletteIndex": null,
+              "plotType": null,
+              "valuePrefix": null,
+              "valueSuffix": null,
+              "valueUnit": null,
+              "yAxis": 0
+            },
+            {
+              "displayName": "2-Datapoints  Archived at ingest",
+              "label": "F",
+              "paletteIndex": 11,
+              "plotType": "LineChart",
+              "valuePrefix": null,
+              "valueSuffix": null,
+              "valueUnit": null,
+              "yAxis": 0
+            },
+            {
+              "displayName": "3-Datapoints Dropped using metric pipeline management (MPM) rules",
+              "label": "C",
+              "paletteIndex": 6,
+              "plotType": "AreaChart",
+              "valuePrefix": null,
+              "valueSuffix": null,
+              "valueUnit": null,
+              "yAxis": 0
+            },
+            {
+              "displayName": "4-Datapoints Billable (mean(1m))",
+              "label": "G",
+              "paletteIndex": 14,
+              "plotType": "AreaChart",
+              "valuePrefix": null,
+              "valueSuffix": null,
+              "valueUnit": null,
+              "yAxis": 0
+            },
+            {
+              "displayName": "System DPM Limit",
+              "label": "D",
+              "paletteIndex": 1,
+              "plotType": "LineChart",
+              "valuePrefix": null,
+              "valueSuffix": null,
+              "valueUnit": null,
+              "yAxis": 0
+            },
+            {
+              "displayName": "sf.org.numBillableArchivedDatapoints",
+              "label": "E",
+              "paletteIndex": null,
+              "plotType": null,
+              "valuePrefix": null,
+              "valueSuffix": null,
+              "valueUnit": null,
+              "yAxis": 0
+            },
+            {
+              "displayName": "Datapoints Received",
+              "label": "B",
+              "paletteIndex": 14,
+              "plotType": "AreaChart",
+              "valuePrefix": null,
+              "valueSuffix": null,
+              "valueUnit": null,
+              "yAxis": 0
+            }
+          ],
+          "showEventLines": false,
+          "stacked": false,
+          "time": {
+            "range": 900000,
+            "rangeEnd": 0,
+            "type": "relative"
+          },
+          "type": "TimeSeriesChart",
+          "unitPrefix": "Metric"
+        },
+        "packageSpecifications": "",
+        "programText": "A = data('sf.org.datapointsTotalCount', rollup='rate').scale(60).mean(over='1m').publish(label='A')\nF = (E*10).publish(label='F')\nC = data('sf.org.numDatapointsDroppedMetricRuleset', rollup='rate').mean(over='1m').scale(60).publish(label='C')\nG = data('sf.org.numBillableDatapoints').mean(over='1m').publish(label='G')\nD = data('OrgLimits', filter=filter('name', 'dpmLimit'), rollup='latest', extrapolation='last_value').sum(by=['sf_metric']).publish(label='D')\nE = data('sf.org.numBillableArchivedDatapoints').publish(label='E', enable=False)\nB = data('sf.org.numDatapointsReceived', filter=(not filter('category', '*')), rollup='rate').mean(over='1m').scale(60).publish(label='B', enable=False)",
+        "relatedDetectorIds": [],
+        "tags": []
+      }
+    },
+    {
+      "chart": {
+        "autoDetectRelatedDetectorIds": [],
+        "created": 0,
+        "creator": null,
+        "customProperties": {},
+        "description": "mean - 1 min",
+        "id": "GTnqU2NAoAM",
+        "lastUpdated": 0,
+        "lastUpdatedBy": null,
+        "name": "%% DPM Savings from using Archiving Tier",
+        "options": {
+          "areaChartOptions": {
+            "showDataMarkers": true
+          },
+          "axes": [
+            {
+              "highWatermark": null,
+              "highWatermarkLabel": null,
+              "label": "",
+              "lowWatermark": null,
+              "lowWatermarkLabel": null,
+              "max": null,
+              "min": null
+            },
+            {
+              "highWatermark": null,
+              "highWatermarkLabel": null,
+              "label": "",
+              "lowWatermark": null,
+              "lowWatermarkLabel": null,
+              "max": null,
+              "min": null
+            }
+          ],
+          "axisPrecision": null,
+          "colorBy": "Dimension",
+          "defaultPlotType": "AreaChart",
+          "eventPublishLabelOptions": [],
+          "histogramChartOptions": {
+            "colorThemeIndex": 16
+          },
+          "includeZero": false,
+          "legendOptions": {
+            "fields": null
+          },
+          "lineChartOptions": {
+            "showDataMarkers": true
+          },
+          "noDataOptions": {
+            "linkText": null,
+            "linkUrl": null,
+            "noDataMessage": null
+          },
+          "onChartLegendOptions": {
+            "dimensionInLegend": null,
+            "showLegend": false
+          },
+          "programOptions": {
+            "disableSampling": false,
+            "maxDelay": null,
+            "minimumResolution": null,
+            "timezone": null
+          },
+          "publishLabelOptions": [
+            {
+              "displayName": "ARCHIVED - BILLABLE (1/10th of Total Archived)",
+              "label": "A",
+              "paletteIndex": 14,
+              "plotType": null,
+              "valuePrefix": null,
+              "valueSuffix": null,
+              "valueUnit": null,
+              "yAxis": 1
+            },
+            {
+              "displayName": "TOTAL BILLABLE = RTM+Hist+1/10Archived",
+              "label": "C",
+              "paletteIndex": 8,
+              "plotType": null,
+              "valuePrefix": null,
+              "valueSuffix": null,
+              "valueUnit": null,
+              "yAxis": 0
+            },
+            {
+              "displayName": "Total Billable DPM if there was no Archiving Rules",
+              "label": "G",
+              "paletteIndex": null,
+              "plotType": null,
+              "valuePrefix": null,
+              "valueSuffix": null,
+              "valueUnit": null,
+              "yAxis": 0
+            },
+            {
+              "displayName": "DP saved using Archiving Tier",
+              "label": "E",
+              "paletteIndex": null,
+              "plotType": null,
+              "valuePrefix": null,
+              "valueSuffix": null,
+              "valueUnit": null,
+              "yAxis": 0
+            },
+            {
+              "displayName": "%% DPM saved using Archiving Tier",
+              "label": "F",
+              "paletteIndex": null,
+              "plotType": null,
+              "valuePrefix": null,
+              "valueSuffix": "%",
+              "valueUnit": null,
+              "yAxis": 0
+            },
+            {
+              "displayName": "ARCHIVED - Total DP received (DO NOT USE)",
+              "label": "B",
+              "paletteIndex": 6,
+              "plotType": null,
+              "valuePrefix": null,
+              "valueSuffix": null,
+              "valueUnit": null,
+              "yAxis": 1
+            },
+            {
+              "displayName": "sf.org.grossArchivedDatapointsReceived (DO NOT USE)",
+              "label": "D",
+              "paletteIndex": null,
+              "plotType": null,
+              "valuePrefix": null,
+              "valueSuffix": null,
+              "valueUnit": null,
+              "yAxis": 0
+            }
+          ],
+          "showEventLines": false,
+          "stacked": false,
+          "time": {
+            "range": 900000,
+            "rangeEnd": 0,
+            "type": "relative"
+          },
+          "type": "TimeSeriesChart",
+          "unitPrefix": "Metric"
+        },
+        "packageSpecifications": "",
+        "programText": "A = data('sf.org.numBillableArchivedDatapoints', rollup='average', extrapolation='last_value').mean(over='1m').publish(label='A', enable=False)\nC = data('sf.org.numBillableDatapoints', rollup='average', extrapolation='last_value').mean(over='1m').publish(label='C', enable=False)\nG = (C+E).publish(label='G', enable=False)\nE = (9*A).publish(label='E', enable=False)\nF = (100*E/G).publish(label='F')\nB = data('sf.org.numArchivedDatapointsReceived', rollup='average').publish(label='B', enable=False)\nD = data('sf.org.grossArchivedDatapointsReceived', rollup='average').publish(label='D', enable=False)",
+        "relatedDetectorIds": [],
+        "tags": []
+      }
+    },
+    {
+      "chart": {
+        "autoDetectRelatedDetectorIds": [],
+        "created": 0,
+        "creator": null,
+        "customProperties": {},
+        "description": "Top 15 datapoint 'dropping' tokens in each realm. Useful to debug large changes in DPM.",
+        "id": "GTnqXFgAoAA",
+        "importOf": "FnNKm5-AI2Q",
+        "lastUpdated": 0,
+        "lastUpdatedBy": null,
+        "name": "Top DPM Dropping Rulesets By Token",
+        "options": {
+          "colorBy": "Dimension",
+          "colorScale2": null,
+          "hideMissingValues": false,
+          "legendOptions": {
+            "fields": [
+              {
+                "enabled": false,
+                "property": "sf_originatingMetric"
+              },
+              {
+                "enabled": false,
+                "property": "orgId"
+              },
+              {
+                "enabled": false,
+                "property": "sf_metric"
+              },
+              {
+                "enabled": false,
+                "property": "source_orgname"
+              },
+              {
+                "enabled": true,
+                "property": "tokenName"
+              },
+              {
+                "enabled": true,
+                "property": "tokenId"
+              },
+              {
+                "enabled": false,
+                "property": "sfx_realm"
+              }
+            ]
+          },
+          "maximumPrecision": null,
+          "noDataOptions": {
+            "linkText": null,
+            "linkUrl": null,
+            "noDataMessage": null
+          },
+          "programOptions": {
+            "disableSampling": true,
+            "maxDelay": 1000,
+            "minimumResolution": 0,
+            "timezone": null
+          },
+          "publishLabelOptions": [
+            {
+              "displayName": "sf.org.numDatapointsDroppedMetricRulesetByToken",
+              "label": "C",
+              "paletteIndex": null,
+              "plotType": null,
+              "valuePrefix": null,
+              "valueSuffix": null,
+              "valueUnit": null,
+              "yAxis": 0
+            },
+            {
+              "displayName": "sf.org.numDatapointsReceivedByToken - Sum by source_orgname,tokenId,tokenName,sfx_realm - Top 15",
+              "label": "A",
+              "paletteIndex": null,
+              "plotType": null,
+              "valuePrefix": null,
+              "valueSuffix": null,
+              "valueUnit": null,
+              "yAxis": 0
+            },
+            {
+              "displayName": "sf.org.numBillableArchivedCustomMetricsByToken",
+              "label": "B",
+              "paletteIndex": null,
+              "plotType": null,
+              "valuePrefix": null,
+              "valueSuffix": null,
+              "valueUnit": null,
+              "yAxis": 0
+            }
+          ],
+          "refreshInterval": null,
+          "secondaryVisualization": "Sparkline",
+          "sortBy": "-value",
+          "time": {
+            "range": 900000,
+            "rangeEnd": 0,
+            "type": "relative"
+          },
+          "type": "List",
+          "unitPrefix": "Metric"
+        },
+        "packageSpecifications": "",
+        "programText": "C = data('sf.org.numDatapointsDroppedMetricRulesetByToken', rollup='rate').mean(by=['source_orgname', 'tokenId', 'tokenName', 'sfx_realm']).scale(60).mean(over='1m').top(count=15).publish(label='C')\nA = data('sf.org.numDatapointsReceivedByToken').sum(by=['source_orgname', 'tokenId', 'tokenName', 'sfx_realm']).top(count=15).publish(label='A', enable=False)\nB = data('sf.org.numBillableArchivedCustomMetricsByToken').publish(label='B', enable=False)",
+        "relatedDetectorIds": [],
+        "tags": []
+      }
+    },
+    {
+      "chart": {
+        "autoDetectRelatedDetectorIds": [],
+        "created": 0,
+        "creator": null,
+        "customProperties": {},
+        "description": "",
+        "id": "GTnqXFgAoAE",
+        "lastUpdated": 0,
+        "lastUpdatedBy": null,
+        "name": "# Metric Rulesets",
+        "options": {
+          "colorBy": "Dimension",
+          "colorScale": null,
+          "colorScale2": null,
+          "maximumPrecision": null,
+          "noDataOptions": {
+            "linkText": null,
+            "linkUrl": null,
+            "noDataMessage": null
+          },
+          "programOptions": {
+            "disableSampling": false,
+            "maxDelay": 0,
+            "minimumResolution": 0,
+            "timezone": null
+          },
+          "publishLabelOptions": [
+            {
+              "displayName": "sf.org.metricruleset.numMetricRulesets - Sum",
+              "label": "A",
+              "paletteIndex": null,
+              "plotType": null,
+              "valuePrefix": null,
+              "valueSuffix": null,
+              "valueUnit": null,
+              "yAxis": 0
+            }
+          ],
+          "refreshInterval": 3600000,
+          "secondaryVisualization": "None",
+          "showSparkLine": false,
+          "time": {
+            "range": 86400000,
+            "rangeEnd": 0,
+            "type": "relative"
+          },
+          "timestampHidden": false,
+          "type": "SingleValue",
+          "unitPrefix": "Metric"
+        },
+        "packageSpecifications": "",
+        "programText": "A = data('sf.org.metricruleset.numMetricRulesets', filter=filter('is_internal_account', 'false') and (not filter('source_orgname', 'sfmonitoring')), rollup='latest').sum().publish(label='A')",
+        "relatedDetectorIds": [],
+        "tags": []
+      }
+    },
+    {
+      "chart": {
+        "autoDetectRelatedDetectorIds": [],
+        "created": 0,
+        "creator": null,
+        "customProperties": {},
+        "description": "",
+        "id": "GTnqY3CAoAI",
+        "lastUpdated": 0,
+        "lastUpdatedBy": null,
+        "name": "# Data Dropping rules",
+        "options": {
+          "colorBy": "Dimension",
+          "colorScale": null,
+          "colorScale2": null,
+          "maximumPrecision": null,
+          "noDataOptions": {
+            "linkText": null,
+            "linkUrl": null,
+            "noDataMessage": null
+          },
+          "programOptions": {
+            "disableSampling": false,
+            "maxDelay": 0,
+            "minimumResolution": 0,
+            "timezone": null
+          },
+          "publishLabelOptions": [
+            {
+              "displayName": "sf.org.metricruleset.numMetricRulesetsWithDataDrop - Sum",
+              "label": "A",
+              "paletteIndex": null,
+              "plotType": null,
+              "valuePrefix": null,
+              "valueSuffix": null,
+              "valueUnit": null,
+              "yAxis": 0
+            }
+          ],
+          "refreshInterval": 3600000,
+          "secondaryVisualization": "None",
+          "showSparkLine": false,
+          "time": {
+            "range": 86400000,
+            "rangeEnd": 0,
+            "type": "relative"
+          },
+          "timestampHidden": false,
+          "type": "SingleValue",
+          "unitPrefix": "Metric"
+        },
+        "packageSpecifications": "",
+        "programText": "A = data('sf.org.metricruleset.numMetricRulesetsWithDataDrop', filter=filter('is_internal_account', 'false') and (not filter('source_orgname', 'sfmonitoring')), rollup='latest').sum().publish(label='A')",
+        "relatedDetectorIds": [],
+        "tags": []
+      }
+    },
+    {
+      "chart": {
+        "autoDetectRelatedDetectorIds": [],
+        "created": 0,
+        "creator": null,
+        "customProperties": {},
+        "description": "mean - last min (%% Datapoints per minute dropped using MetricRulesets in MPM)",
+        "id": "GTnqY3CAoAM",
+        "lastUpdated": 0,
+        "lastUpdatedBy": null,
+        "name": "%% DPM dropped via MPM",
+        "options": {
+          "colorBy": "Dimension",
+          "colorScale": null,
+          "colorScale2": null,
+          "maximumPrecision": 3,
+          "noDataOptions": {
+            "linkText": null,
+            "linkUrl": null,
+            "noDataMessage": null
+          },
+          "programOptions": {
+            "disableSampling": false,
+            "maxDelay": 0,
+            "minimumResolution": 0,
+            "timezone": null
+          },
+          "publishLabelOptions": [
+            {
+              "displayName": "DPM dropped via MPM",
+              "label": "A",
+              "paletteIndex": null,
+              "plotType": null,
+              "valuePrefix": null,
+              "valueSuffix": null,
+              "valueUnit": null,
+              "yAxis": 0
+            },
+            {
+              "displayName": "Total DPM Ingested (includes dropped via MPM, dropped throttling/invalid/etc.)",
+              "label": "E",
+              "paletteIndex": null,
+              "plotType": null,
+              "valuePrefix": null,
+              "valueSuffix": null,
+              "valueUnit": null,
+              "yAxis": 0
+            },
+            {
+              "displayName": "%% DPM dropped via MPM",
+              "label": "F",
+              "paletteIndex": null,
+              "plotType": null,
+              "valuePrefix": null,
+              "valueSuffix": "%",
+              "valueUnit": null,
+              "yAxis": 0
+            },
+            {
+              "displayName": "Datapoints Received per Minute",
+              "label": "B",
+              "paletteIndex": null,
+              "plotType": null,
+              "valuePrefix": null,
+              "valueSuffix": null,
+              "valueUnit": null,
+              "yAxis": 0
+            },
+            {
+              "displayName": "sf.org.numBillableDatapoints",
+              "label": "D",
+              "paletteIndex": null,
+              "plotType": null,
+              "valuePrefix": null,
+              "valueSuffix": null,
+              "valueUnit": null,
+              "yAxis": 0
+            }
+          ],
+          "refreshInterval": null,
+          "secondaryVisualization": "None",
+          "showSparkLine": false,
+          "time": {
+            "range": 900000,
+            "rangeEnd": 0,
+            "type": "relative"
+          },
+          "timestampHidden": false,
+          "type": "SingleValue",
+          "unitPrefix": "Metric"
+        },
+        "packageSpecifications": "",
+        "programText": "A = data('sf.org.numDatapointsDroppedMetricRuleset', rollup='rate').scale(60).mean(over='1m').publish(label='A', enable=False)\nE = data('sf.org.datapointsTotalCount', rollup='rate').scale(60).mean(over='1m').publish(label='E', enable=False)\nF = (100*A/E).publish(label='F')\nB = data('sf.org.numDatapointsReceived', filter=(not filter('category', '*')), rollup='rate').scale(60).publish(label='B', enable=False)\nD = data('sf.org.numBillableDatapoints').publish(label='D', enable=False)",
+        "relatedDetectorIds": [],
+        "tags": []
+      }
+    },
+    {
+      "chart": {
+        "autoDetectRelatedDetectorIds": [],
+        "created": 0,
+        "creator": null,
+        "customProperties": {},
+        "description": "",
+        "id": "GTnqloTAkAA",
+        "lastUpdated": 0,
+        "lastUpdatedBy": null,
+        "name": "# Aggregation Rules",
+        "options": {
+          "colorBy": "Dimension",
+          "colorScale": null,
+          "colorScale2": null,
+          "maximumPrecision": null,
+          "noDataOptions": {
+            "linkText": null,
+            "linkUrl": null,
+            "noDataMessage": null
+          },
+          "programOptions": {
+            "disableSampling": false,
+            "maxDelay": 0,
+            "minimumResolution": 0,
+            "timezone": null
+          },
+          "publishLabelOptions": [
+            {
+              "displayName": "sf.org.metricruleset.numAggregationRules - Sum",
+              "label": "A",
+              "paletteIndex": null,
+              "plotType": null,
+              "valuePrefix": null,
+              "valueSuffix": null,
+              "valueUnit": null,
+              "yAxis": 0
+            }
+          ],
+          "refreshInterval": 3600000,
+          "secondaryVisualization": "None",
+          "showSparkLine": false,
+          "time": {
+            "range": 86400000,
+            "rangeEnd": 0,
+            "type": "relative"
+          },
+          "timestampHidden": false,
+          "type": "SingleValue",
+          "unitPrefix": "Metric"
+        },
+        "packageSpecifications": "",
+        "programText": "A = data('sf.org.metricruleset.numAggregationRules', filter=filter('is_internal_account', 'false') and (not filter('source_orgname', 'sfmonitoring')), rollup='latest').sum().publish(label='A')",
+        "relatedDetectorIds": [],
+        "tags": []
+      }
+    },
+    {
+      "chart": {
+        "autoDetectRelatedDetectorIds": [],
+        "created": 0,
+        "creator": null,
+        "customProperties": {},
+        "description": "Top 15 datapoint 'dropping' tokens in each realm. Useful to debug large changes in DPM.",
+        "id": "GTn0Tg7AsAA",
+        "importOf": "FnNKm5-AI2Q",
+        "lastUpdated": 0,
+        "lastUpdatedBy": null,
+        "name": "Top DPM Dropping Rulesets By Token",
+        "options": {
+          "areaChartOptions": {
+            "showDataMarkers": false
+          },
+          "axes": [
+            {
+              "highWatermark": null,
+              "highWatermarkLabel": null,
+              "label": "",
+              "lowWatermark": null,
+              "lowWatermarkLabel": null,
+              "max": null,
+              "min": null
+            },
+            {
+              "highWatermark": null,
+              "highWatermarkLabel": null,
+              "label": "",
+              "lowWatermark": null,
+              "lowWatermarkLabel": null,
+              "max": null,
+              "min": null
+            }
+          ],
+          "axisPrecision": null,
+          "colorBy": "Dimension",
+          "defaultPlotType": "AreaChart",
+          "eventPublishLabelOptions": [],
+          "histogramChartOptions": {
+            "colorThemeIndex": 16
+          },
+          "includeZero": false,
+          "legendOptions": {
+            "fields": [
+              {
+                "enabled": false,
+                "property": "sf_originatingMetric"
+              },
+              {
+                "enabled": false,
+                "property": "orgId"
+              },
+              {
+                "enabled": false,
+                "property": "sf_metric"
+              },
+              {
+                "enabled": false,
+                "property": "source_orgname"
+              },
+              {
+                "enabled": true,
+                "property": "tokenName"
+              },
+              {
+                "enabled": true,
+                "property": "tokenId"
+              },
+              {
+                "enabled": false,
+                "property": "sfx_realm"
+              }
+            ]
+          },
+          "lineChartOptions": {
+            "showDataMarkers": false
+          },
+          "noDataOptions": {
+            "linkText": null,
+            "linkUrl": null,
+            "noDataMessage": null
+          },
+          "onChartLegendOptions": {
+            "dimensionInLegend": "tokenName",
+            "showLegend": true
+          },
+          "programOptions": {
+            "disableSampling": true,
+            "maxDelay": 1000,
+            "minimumResolution": 0,
+            "timezone": null
+          },
+          "publishLabelOptions": [
+            {
+              "displayName": "sf.org.numDatapointsDroppedMetricRulesetByToken",
+              "label": "C",
+              "paletteIndex": null,
+              "plotType": null,
+              "valuePrefix": null,
+              "valueSuffix": null,
+              "valueUnit": null,
+              "yAxis": 0
+            },
+            {
+              "displayName": "sf.org.numDatapointsReceivedByToken - Sum by source_orgname,tokenId,tokenName,sfx_realm - Top 15",
+              "label": "A",
+              "paletteIndex": null,
+              "plotType": null,
+              "valuePrefix": null,
+              "valueSuffix": null,
+              "valueUnit": null,
+              "yAxis": 0
+            },
+            {
+              "displayName": "sf.org.numBillableArchivedCustomMetricsByToken",
+              "label": "B",
+              "paletteIndex": null,
+              "plotType": null,
+              "valuePrefix": null,
+              "valueSuffix": null,
+              "valueUnit": null,
+              "yAxis": 0
+            }
+          ],
+          "showEventLines": false,
+          "stacked": false,
+          "time": {
+            "range": 900000,
+            "rangeEnd": 0,
+            "type": "relative"
+          },
+          "type": "TimeSeriesChart",
+          "unitPrefix": "Metric"
+        },
+        "packageSpecifications": "",
+        "programText": "C = data('sf.org.numDatapointsDroppedMetricRulesetByToken', rollup='rate').mean(by=['source_orgname', 'tokenId', 'tokenName', 'sfx_realm']).scale(60).mean(over='1m').top(count=15).publish(label='C')\nA = data('sf.org.numDatapointsReceivedByToken').sum(by=['source_orgname', 'tokenId', 'tokenName', 'sfx_realm']).top(count=15).publish(label='A', enable=False)\nB = data('sf.org.numBillableArchivedCustomMetricsByToken').publish(label='B', enable=False)",
+        "relatedDetectorIds": [],
+        "tags": []
+      }
+    },
+    {
+      "chart": {
+        "autoDetectRelatedDetectorIds": [],
+        "created": 0,
+        "creator": null,
+        "customProperties": {},
+        "description": "mean - 1 min (%% Datapoints per minute dropped using MetricRulesets in MPM)",
+        "id": "GTn0Tg_AkAA",
+        "lastUpdated": 0,
+        "lastUpdatedBy": null,
+        "name": "%% DPM dropped via MPM",
+        "options": {
+          "areaChartOptions": {
+            "showDataMarkers": false
+          },
+          "axes": [
+            {
+              "highWatermark": null,
+              "highWatermarkLabel": null,
+              "label": "",
+              "lowWatermark": null,
+              "lowWatermarkLabel": null,
+              "max": null,
+              "min": null
+            },
+            {
+              "highWatermark": null,
+              "highWatermarkLabel": null,
+              "label": "",
+              "lowWatermark": null,
+              "lowWatermarkLabel": null,
+              "max": null,
+              "min": null
+            }
+          ],
+          "axisPrecision": null,
+          "colorBy": "Dimension",
+          "defaultPlotType": "AreaChart",
+          "eventPublishLabelOptions": [],
+          "histogramChartOptions": {
+            "colorThemeIndex": 16
+          },
+          "includeZero": false,
+          "legendOptions": {
+            "fields": null
+          },
+          "lineChartOptions": {
+            "showDataMarkers": false
+          },
+          "noDataOptions": {
+            "linkText": null,
+            "linkUrl": null,
+            "noDataMessage": null
+          },
+          "onChartLegendOptions": {
+            "dimensionInLegend": null,
+            "showLegend": false
+          },
+          "programOptions": {
+            "disableSampling": false,
+            "maxDelay": 0,
+            "minimumResolution": 0,
+            "timezone": null
+          },
+          "publishLabelOptions": [
+            {
+              "displayName": "DPM dropped via MPM",
+              "label": "A",
+              "paletteIndex": null,
+              "plotType": null,
+              "valuePrefix": null,
+              "valueSuffix": null,
+              "valueUnit": null,
+              "yAxis": 0
+            },
+            {
+              "displayName": "Total DPM Ingested (includes dropped via MPM, dropped throttling/invalid/etc.)",
+              "label": "E",
+              "paletteIndex": null,
+              "plotType": null,
+              "valuePrefix": null,
+              "valueSuffix": null,
+              "valueUnit": null,
+              "yAxis": 0
+            },
+            {
+              "displayName": "%% DPM dropped via MPM",
+              "label": "F",
+              "paletteIndex": null,
+              "plotType": null,
+              "valuePrefix": null,
+              "valueSuffix": "%",
+              "valueUnit": null,
+              "yAxis": 0
+            },
+            {
+              "displayName": "Datapoints Received per Minute",
+              "label": "B",
+              "paletteIndex": null,
+              "plotType": null,
+              "valuePrefix": null,
+              "valueSuffix": null,
+              "valueUnit": null,
+              "yAxis": 0
+            },
+            {
+              "displayName": "sf.org.numBillableDatapoints",
+              "label": "D",
+              "paletteIndex": null,
+              "plotType": null,
+              "valuePrefix": null,
+              "valueSuffix": null,
+              "valueUnit": null,
+              "yAxis": 0
+            }
+          ],
+          "showEventLines": false,
+          "stacked": false,
+          "time": {
+            "range": 900000,
+            "rangeEnd": 0,
+            "type": "relative"
+          },
+          "type": "TimeSeriesChart",
+          "unitPrefix": "Metric"
+        },
+        "packageSpecifications": "",
+        "programText": "A = data('sf.org.numDatapointsDroppedMetricRuleset', rollup='rate').scale(60).mean(over='1m').publish(label='A', enable=False)\nE = data('sf.org.datapointsTotalCount', rollup='rate').scale(60).mean(over='1m').publish(label='E', enable=False)\nF = (100*A/E).publish(label='F')\nB = data('sf.org.numDatapointsReceived', filter=(not filter('category', '*')), rollup='rate').scale(60).publish(label='B', enable=False)\nD = data('sf.org.numBillableDatapoints').publish(label='D', enable=False)",
+        "relatedDetectorIds": [],
+        "tags": []
+      }
+    },
+    {
+      "chart": {
+        "autoDetectRelatedDetectorIds": [],
+        "created": 0,
+        "creator": null,
+        "customProperties": {},
+        "description": "mean - last 1h",
+        "id": "GTn0Tg_Ak-c",
+        "lastUpdated": 0,
+        "lastUpdatedBy": null,
+        "name": "%% DPM Savings from using Archiving Tier",
+        "options": {
+          "colorBy": "Dimension",
+          "colorScale": null,
+          "colorScale2": null,
+          "maximumPrecision": 2,
+          "noDataOptions": {
+            "linkText": null,
+            "linkUrl": null,
+            "noDataMessage": null
+          },
+          "programOptions": {
+            "disableSampling": false,
+            "maxDelay": null,
+            "minimumResolution": null,
+            "timezone": null
+          },
+          "publishLabelOptions": [
+            {
+              "displayName": "ARCHIVED - BILLABLE (1/10th of Total Archived)",
+              "label": "A",
+              "paletteIndex": 14,
+              "plotType": null,
+              "valuePrefix": null,
+              "valueSuffix": null,
+              "valueUnit": null,
+              "yAxis": 1
+            },
+            {
+              "displayName": "TOTAL BILLABLE = RTM+Hist+1/10Archived",
+              "label": "C",
+              "paletteIndex": 8,
+              "plotType": null,
+              "valuePrefix": null,
+              "valueSuffix": null,
+              "valueUnit": null,
+              "yAxis": 0
+            },
+            {
+              "displayName": "Total Billable DPM if there was no Archiving Rules",
+              "label": "G",
+              "paletteIndex": null,
+              "plotType": null,
+              "valuePrefix": null,
+              "valueSuffix": null,
+              "valueUnit": null,
+              "yAxis": 0
+            },
+            {
+              "displayName": "DP saved using Archiving Tier",
+              "label": "E",
+              "paletteIndex": null,
+              "plotType": null,
+              "valuePrefix": null,
+              "valueSuffix": null,
+              "valueUnit": null,
+              "yAxis": 0
+            },
+            {
+              "displayName": "%% DPM saved using Archiving Tier",
+              "label": "F",
+              "paletteIndex": null,
+              "plotType": null,
+              "valuePrefix": null,
+              "valueSuffix": "%",
+              "valueUnit": null,
+              "yAxis": 0
+            },
+            {
+              "displayName": "ARCHIVED - Total DP received (DO NOT USE)",
+              "label": "B",
+              "paletteIndex": 6,
+              "plotType": null,
+              "valuePrefix": null,
+              "valueSuffix": null,
+              "valueUnit": null,
+              "yAxis": 1
+            },
+            {
+              "displayName": "sf.org.grossArchivedDatapointsReceived (DO NOT USE)",
+              "label": "D",
+              "paletteIndex": null,
+              "plotType": null,
+              "valuePrefix": null,
+              "valueSuffix": null,
+              "valueUnit": null,
+              "yAxis": 0
+            }
+          ],
+          "refreshInterval": null,
+          "secondaryVisualization": "None",
+          "showSparkLine": false,
+          "time": {
+            "range": 900000,
+            "rangeEnd": 0,
+            "type": "relative"
+          },
+          "timestampHidden": false,
+          "type": "SingleValue",
+          "unitPrefix": "Metric"
+        },
+        "packageSpecifications": "",
+        "programText": "A = data('sf.org.numBillableArchivedDatapoints', rollup='average', extrapolation='last_value').publish(label='A', enable=False)\nC = data('sf.org.numBillableDatapoints', rollup='average', extrapolation='last_value').publish(label='C', enable=False)\nG = (C+E).publish(label='G', enable=False)\nE = (9*A).publish(label='E', enable=False)\nF = (100*E/G).mean(over='24h').publish(label='F')\nB = data('sf.org.numArchivedDatapointsReceived', rollup='average').publish(label='B', enable=False)\nD = data('sf.org.grossArchivedDatapointsReceived', rollup='average').publish(label='D', enable=False)",
+        "relatedDetectorIds": [],
+        "tags": []
+      }
+    },
+    {
+      "chart": {
+        "autoDetectRelatedDetectorIds": [],
+        "created": 0,
+        "creator": null,
+        "customProperties": {},
+        "description": "Top 15 datapoint senders in each realm. Useful to debug large changes in DPM.",
+        "id": "GTn0Tg_Ak-g",
+        "importOf": "FnNKm5-AI2Q",
+        "lastUpdated": 0,
+        "lastUpdatedBy": null,
+        "name": "Top DPM Senders By Token",
+        "options": {
+          "areaChartOptions": {
+            "showDataMarkers": true
+          },
+          "axes": [
+            {
+              "highWatermark": null,
+              "highWatermarkLabel": null,
+              "label": "",
+              "lowWatermark": null,
+              "lowWatermarkLabel": null,
+              "max": null,
+              "min": null
+            },
+            {
+              "highWatermark": null,
+              "highWatermarkLabel": null,
+              "label": "",
+              "lowWatermark": null,
+              "lowWatermarkLabel": null,
+              "max": null,
+              "min": null
+            }
+          ],
+          "axisPrecision": null,
+          "colorBy": "Dimension",
+          "defaultPlotType": "AreaChart",
+          "eventPublishLabelOptions": [],
+          "histogramChartOptions": {
+            "colorThemeIndex": 16
+          },
+          "includeZero": false,
+          "legendOptions": {
+            "fields": [
+              {
+                "enabled": false,
+                "property": "sf_originatingMetric"
+              },
+              {
+                "enabled": false,
+                "property": "orgId"
+              },
+              {
+                "enabled": false,
+                "property": "sf_metric"
+              },
+              {
+                "enabled": false,
+                "property": "source_orgname"
+              },
+              {
+                "enabled": true,
+                "property": "tokenName"
+              },
+              {
+                "enabled": true,
+                "property": "tokenId"
+              },
+              {
+                "enabled": false,
+                "property": "sfx_realm"
+              }
+            ]
+          },
+          "lineChartOptions": {
+            "showDataMarkers": true
+          },
+          "noDataOptions": {
+            "linkText": null,
+            "linkUrl": null,
+            "noDataMessage": null
+          },
+          "onChartLegendOptions": {
+            "dimensionInLegend": "tokenName",
+            "showLegend": true
+          },
+          "programOptions": {
+            "disableSampling": true,
+            "maxDelay": 1000,
+            "minimumResolution": 0,
+            "timezone": null
+          },
+          "publishLabelOptions": [
+            {
+              "displayName": "sf.org.numDatapointsReceivedByToken - Sum by source_orgname,tokenId,tokenName,sfx_realm - Top 15 - Scale:60 - Mean(1m)",
+              "label": "A",
+              "paletteIndex": null,
+              "plotType": null,
+              "valuePrefix": null,
+              "valueSuffix": null,
+              "valueUnit": null,
+              "yAxis": 0
+            }
+          ],
+          "showEventLines": false,
+          "stacked": false,
+          "time": {
+            "range": 900000,
+            "rangeEnd": 0,
+            "type": "relative"
+          },
+          "type": "TimeSeriesChart",
+          "unitPrefix": "Metric"
+        },
+        "packageSpecifications": "",
+        "programText": "A = data('sf.org.numDatapointsReceivedByToken', rollup='rate').top(count=15).scale(60).mean(over='1m').sum(by=['tokenName', 'tokenId']).publish(label='A')",
+        "relatedDetectorIds": [],
+        "tags": []
+      }
+    },
+    {
+      "chart": {
+        "autoDetectRelatedDetectorIds": [],
+        "created": 0,
+        "creator": null,
+        "customProperties": {},
+        "description": "",
+        "id": "GTn0Tg_AsAA",
+        "lastUpdated": 0,
+        "lastUpdatedBy": null,
+        "name": "# Archived metrics",
+        "options": {
+          "colorBy": "Dimension",
+          "colorScale": null,
+          "colorScale2": null,
+          "maximumPrecision": null,
+          "noDataOptions": {
+            "linkText": null,
+            "linkUrl": null,
+            "noDataMessage": null
+          },
+          "programOptions": {
+            "disableSampling": true,
+            "maxDelay": 0,
+            "minimumResolution": 0,
+            "timezone": null
+          },
+          "publishLabelOptions": [
+            {
+              "displayName": "sf.org.metricruleset.numMetricRulesetsWithArchive - Sum",
+              "label": "A",
+              "paletteIndex": null,
+              "plotType": null,
+              "valuePrefix": null,
+              "valueSuffix": null,
+              "valueUnit": null,
+              "yAxis": 0
+            }
+          ],
+          "refreshInterval": 3600000,
+          "secondaryVisualization": "None",
+          "showSparkLine": false,
+          "time": {
+            "range": 86400000,
+            "rangeEnd": 0,
+            "type": "relative"
+          },
+          "timestampHidden": false,
+          "type": "SingleValue",
+          "unitPrefix": "Metric"
+        },
+        "packageSpecifications": "",
+        "programText": "A = data('sf.org.metricruleset.numMetricRulesetsWithArchive', filter=filter('is_internal_account', 'false') and (not filter('source_orgname', 'sfmonitoring')), rollup='latest').sum().publish(label='A')",
+        "relatedDetectorIds": [],
+        "tags": []
+      }
+    },
+    {
+      "chart": {
+        "autoDetectRelatedDetectorIds": [],
+        "created": 0,
+        "creator": null,
+        "customProperties": {},
+        "description": "",
+        "id": "GToHkuzAkAA",
+        "lastUpdated": 0,
+        "lastUpdatedBy": null,
+        "name": ".",
+        "options": {
+          "markdown": "<table width=\"100%\" height=\"40%\" rules=\"none\">\n<tr><td valign=\"middle\" align=\"center\" bgcolor=\"#4682B4\">\n<font size=\"5\" color=\"white\">Tracking Impact of Data Optimisation initiatives</font>\n</td></tr>\n</table>\n<p align=\"left\">\n</p>\nThese charts help with tracking of Impact of using **Metrics Pipeline Management** ***Archiving tier*** and ***Filtering/Aggregation*** tools. \n\n\n#####**<a href=\"https://docs.splunk.com/observability/en/infrastructure/metrics-pipeline/related-metrics.html\" target=\"_blank\">More info on available MPM metrics</a>**",
+          "type": "Text"
+        },
+        "packageSpecifications": "",
+        "programText": "",
+        "relatedDetectorIds": [],
+        "tags": []
+      }
+    },
+    {
+      "chart": {
+        "autoDetectRelatedDetectorIds": [],
+        "created": 0,
+        "creator": null,
+        "customProperties": {},
+        "description": "Top 15 datapoint senders in each realm. Useful to debug large changes in DPM.",
+        "id": "GToXjM8AoAA",
+        "importOf": "FnNKm5-AI2Q",
+        "lastUpdated": 0,
+        "lastUpdatedBy": null,
+        "name": "Top DPM Senders By Token",
+        "options": {
+          "colorBy": "Dimension",
+          "colorScale2": null,
+          "hideMissingValues": false,
+          "legendOptions": {
+            "fields": [
+              {
+                "enabled": false,
+                "property": "sf_originatingMetric"
+              },
+              {
+                "enabled": false,
+                "property": "orgId"
+              },
+              {
+                "enabled": false,
+                "property": "sf_metric"
+              },
+              {
+                "enabled": false,
+                "property": "source_orgname"
+              },
+              {
+                "enabled": true,
+                "property": "tokenName"
+              },
+              {
+                "enabled": true,
+                "property": "tokenId"
+              },
+              {
+                "enabled": false,
+                "property": "sfx_realm"
+              },
+              {
+                "enabled": true,
+                "property": "category"
+              }
+            ]
+          },
+          "maximumPrecision": 3,
+          "noDataOptions": {
+            "linkText": null,
+            "linkUrl": null,
+            "noDataMessage": null
+          },
+          "programOptions": {
+            "disableSampling": true,
+            "maxDelay": 1000,
+            "minimumResolution": 0,
+            "timezone": null
+          },
+          "publishLabelOptions": [
+            {
+              "displayName": "sf.org.numDatapointsReceivedByToken - Sum by source_orgname,tokenId,tokenName,sfx_realm - Top 15 - Scale:60 - Mean(1m)",
+              "label": "A",
+              "paletteIndex": null,
+              "plotType": null,
+              "valuePrefix": null,
+              "valueSuffix": null,
+              "valueUnit": null,
+              "yAxis": 0
+            }
+          ],
+          "refreshInterval": null,
+          "secondaryVisualization": "Sparkline",
+          "sortBy": "-value",
+          "time": {
+            "range": 900000,
+            "rangeEnd": 0,
+            "type": "relative"
+          },
+          "type": "List",
+          "unitPrefix": "Metric"
+        },
+        "packageSpecifications": "",
+        "programText": "A = data('sf.org.numDatapointsReceivedByToken', rollup='rate').scale(60).mean(over='1m').sum(by=['tokenName', 'tokenId']).publish(label='A')",
+        "relatedDetectorIds": [],
+        "tags": []
+      }
+    }
+  ],
+  "dashboardExport": {
+    "dashboard": {
+      "authorizedWriters": null,
+      "chartDensity": "DEFAULT",
+      "charts": [
+        {
+          "chartId": "GToHkuzAkAA",
+          "column": 0,
+          "height": 2,
+          "row": 0,
+          "width": 2
+        },
+        {
+          "chartId": "GTnqU2NAoAI",
+          "column": 2,
+          "height": 2,
+          "row": 0,
+          "width": 10
+        },
+        {
+          "chartId": "GTn0Tg_Ak-c",
+          "column": 0,
+          "height": 1,
+          "row": 2,
+          "width": 3
+        },
+        {
+          "chartId": "GTnqU2NAoAM",
+          "column": 3,
+          "height": 1,
+          "row": 2,
+          "width": 3
+        },
+        {
+          "chartId": "GTnqY3CAoAM",
+          "column": 6,
+          "height": 1,
+          "row": 2,
+          "width": 3
+        },
+        {
+          "chartId": "GTn0Tg_AkAA",
+          "column": 9,
+          "height": 1,
+          "row": 2,
+          "width": 3
+        },
+        {
+          "chartId": "GTnqU2NAoAE",
+          "column": 0,
+          "height": 1,
+          "row": 3,
+          "width": 12
+        },
+        {
+          "chartId": "GTnqXFgAoAE",
+          "column": 0,
+          "height": 1,
+          "row": 4,
+          "width": 2
+        },
+        {
+          "chartId": "GTnqY3CAoAI",
+          "column": 2,
+          "height": 1,
+          "row": 4,
+          "width": 2
+        },
+        {
+          "chartId": "GTnQoazAsAE",
+          "column": 8,
+          "height": 1,
+          "row": 4,
+          "width": 2
+        },
+        {
+          "chartId": "GTn0Tg_AsAA",
+          "column": 4,
+          "height": 1,
+          "row": 4,
+          "width": 2
+        },
+        {
+          "chartId": "GTnqloTAkAA",
+          "column": 6,
+          "height": 1,
+          "row": 4,
+          "width": 2
+        },
+        {
+          "chartId": "GTn0Tg_Ak-g",
+          "column": 5,
+          "height": 2,
+          "row": 5,
+          "width": 7
+        },
+        {
+          "chartId": "GToXjM8AoAA",
+          "column": 0,
+          "height": 2,
+          "row": 5,
+          "width": 5
+        },
+        {
+          "chartId": "GTn0Tg7AsAA",
+          "column": 5,
+          "height": 2,
+          "row": 7,
+          "width": 7
+        },
+        {
+          "chartId": "GTnqXFgAoAA",
+          "column": 0,
+          "height": 2,
+          "row": 7,
+          "width": 5
+        }
+      ],
+      "created": 0,
+      "creator": null,
+      "customProperties": null,
+      "description": "",
+      "discoveryOptions": null,
+      "eventOverlays": null,
+      "filters": {
+        "sources": null,
+        "time": {
+          "end": "Now",
+          "start": "-15d"
+        },
+        "variables": [
+          {
+            "alias": "orgId",
+            "applyIfExists": true,
+            "description": "",
+            "preferredSuggestions": [],
+            "property": "orgId",
+            "propertyMappings": [
+              "orgId"
+            ],
+            "replaceOnly": false,
+            "required": true,
+            "restricted": false,
+            "value": [
+              "*"
+            ]
+          }
+        ]
+      },
+      "groupId": "FB78R75AkAE",
+      "groupName": "zratko@splunk.com",
+      "id": "GTnqY3CAoAA",
+      "lastUpdated": 0,
+      "lastUpdatedBy": null,
+      "maxDelayOverride": null,
+      "name": "[DPM] Metric Data Optimisation - Impact Tracking",
+      "permissions": null,
+      "selectedEventOverlays": [],
+      "tags": null
+    }
+  },
+  "hashCode": 921421033,
+  "id": "GTnqY3CAoAA",
+  "modelVersion": 1,
+  "packageType": "DASHBOARD"
+}
