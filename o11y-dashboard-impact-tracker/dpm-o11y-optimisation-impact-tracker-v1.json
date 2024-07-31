@@ -1039,7 +1039,7 @@
         "created": 0,
         "creator": null,
         "customProperties": {},
-        "description": "mean - last 1h",
+        "description": "mean - last 24h",
         "id": "GTn0Tg_Ak-c",
         "lastUpdated": 0,
         "lastUpdatedBy": null,
