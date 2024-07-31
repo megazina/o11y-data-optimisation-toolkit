@@ -15,7 +15,7 @@ This script generates a Terraform configuration file for creating SignalFx metri
 This tf file is ready for working with Terraform:
 `terraform init`
 `terraform plan`
-and then `terraform apply/delete` as required.
+and then `terraform apply/destroy` as required.
 
 
 ## Prerequisites
