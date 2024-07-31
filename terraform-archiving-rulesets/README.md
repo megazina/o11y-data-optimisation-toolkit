@@ -1,4 +1,4 @@
-# Terraform Metric Ruleset Generator (Splunk Observability Metric Rulesets)
+# Terraform [Splunk Observability] Metric Ruleset Generator
 ## v1.0
 
 💡 **Note:** Routing to the Archived tier is not supported yet in version 9.1.6 of the SignalFx Terraform provider, but it will be available soon. This script will work with the upcoming release. Other routing options like Drop and RealTime work as expected.
