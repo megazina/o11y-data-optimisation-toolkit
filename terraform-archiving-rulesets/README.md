@@ -49,7 +49,9 @@ If you still need to install them manually - run `pip install configparser`
 
 2. **Prepare CSV File**: Ensure your CSV file contains a column named either Metric Name or metric_name with the metric names you wish to include in the Terraform configuration.
 
-   Example `CSV File`:
+   It can be any CSV, that contains the first column - `Metric Name` or `METRIC_NAME`.
+   
+   Example `CSV File` (from org-analyzer):
 
     ```csv
     Metric Name,Custom MTS,Charts,Detectors
@@ -61,12 +63,12 @@ If you still need to install them manually - run `pip install configparser`
     te.bgp.metrics.updates,94,,
     ```
 
-3. **Run the Script**: Execute the script and provide the CSV filename when prompted.
+4. **Run the Script**: Execute the script and provide the CSV filename when prompted.
 
     `python generate_terraform.py`
 
 
-4. **Output**: The script will generate a metric_ruleset.tf file with the appropriate Terraform configuration.
+5. **Output**: The script will generate a metric_ruleset.tf file with the appropriate Terraform configuration.
 
     Example Output (`metric_ruleset.tf`):
     ```tf
