@@ -1,12 +1,12 @@
 # Terraform [Splunk Observability] Metric Ruleset Generator
-## v1.0
+## v1.1
 
-💡 **Note:** Routing to the Archived tier is not supported yet in version 9.1.6 of the Splunk-SignalFx Terraform provider, but it will be available soon. This script will work with the upcoming release. Other routing options like Drop and RealTime work as expected.
+💡 **Note:** Routing to the Archived tier is supported starting from version `9.2.0` of the Splunk-SignalFx Terraform provider.
 
 
 ## Overview
 
-This script generates a Terraform configuration file for creating Splunk Observability Cloud metric rulesets in order to route metrics to the desired destination (real-time tier, archiving tier or drop). 
+This script generates a Terraform configuration file for creating Splunk Observability Cloud metric rulesets in order to route metrics to the desired destination (`RealTime`, `Archived`, or `Drop`). 
 
 *Metric names* are read from a CSV file, User is asked to enter name of the file (i.e. myfile.csv) 
 *Configuration* parameters are taken from a `config.conf` file.
