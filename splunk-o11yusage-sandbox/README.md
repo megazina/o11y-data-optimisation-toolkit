@@ -1,11 +1,20 @@
 # Splunk Enterprise/Cloud App with Dashboards used to help with Splunk Observability Data Optimisation
 ## v1.5.0
+
+## Indexes:
 This app will create an `o11yusage` index - this is what *you should use to Upload reports into*.
 
 ## Sourcetypes:
 `o11yusage:metric:usage:report` -- use this for *SWAT Metrics Usage* report, and SWAT Dimensions Usage report if required
 
 `o11yusage:per:dimension:dpm` - use this for *Datapoints per dimension* report, and Dimensions report (both from o11y UI/API) as required.
+
+## If Uploading CSV file manually:
+
+For usability - recommend to use something like this:
+   -- host = `customer-30d-dd-mm-yy-metrics-usage`
+   -- index = `o11yusage`
+   -- sourcetype = `o11yusage:metric:usage:report` (it will parse the dates from the Filename)
 
 ## Loookup (for Dashboard that shows Metric Ingest Breakdown by Tokens)
 
