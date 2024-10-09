@@ -12,9 +12,10 @@ This app will create an `o11yusage` index - this is what *you should use to Uplo
 ## If Uploading CSV file manually:
 
 For usability - recommend to use something like this:
-   -- host = `customer-30d-dd-mm-yy-metrics-usage`
-   -- index = `o11yusage`
-   -- sourcetype = `o11yusage:metric:usage:report` (it will parse the dates from the Filename)
+
+    host = `customer-30d-dd-mm-yy-metrics-usage`
+    index = `o11yusage`
+    sourcetype = `o11yusage:metric:usage:report` (it will parse the dates from the Filename)
 
 ## Loookup (for Dashboard that shows Metric Ingest Breakdown by Tokens)
 
