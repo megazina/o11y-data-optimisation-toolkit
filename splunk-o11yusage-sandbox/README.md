@@ -1,5 +1,5 @@
 # Splunk Enterprise/Cloud App with Dashboards used to help with Splunk Observability Data Optimisation
-## v1.0.0
+## v1.5.0
 This app will create an o11yusage index - this is what you should use to Upload reports into.
 
 ## Sourcetypes:
